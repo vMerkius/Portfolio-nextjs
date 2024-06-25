@@ -29,6 +29,9 @@ body {
     border-right: 0.15em solid #c80d0d;
   }
   &__next {
+    border: none;
+    background-color: transparent;
+    color: #c80d0d;
     position: relative;
     font-size: 1.5rem;
     transition: text-decoration ease-in-out 1s;

@@ -1,11 +1,16 @@
 // import ThreeScene from "@/components/three-scene";
-import "../styles/welcome.scss";
+"use client";
+
+import Welcome from "@/components/welcome";
+import { useState } from "react";
+import Home from "./home/page";
 const WelcomePage = () => {
+  const [showWelcome, setShowWelcome] = useState<boolean>(true);
   return (
-    <div className="welcome">
-      <h1 className="welcome__header">Welcome to my portfolio!</h1>
-      <h2 className="welcome__next">Let's see! &rarr;</h2>
-      {/* <ThreeScene /> */}
+    <div>
+      {showWelcome && <Welcome setShowWelcome={setShowWelcome} />}
+
+      {!showWelcome && <Home />}
     </div>
   );
 };
