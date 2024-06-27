@@ -7,8 +7,14 @@
   flex-direction: column;
   font-size: 2rem;
   overflow: hidden;
+  background-image: url("/bg/bg-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &__header {
+    color: #4eb5dd;
+
     margin: 0;
     width: 70%;
     display: inline-block;
@@ -18,9 +24,10 @@
     animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
     animation-fill-mode: forwards;
     text-align: center;
-    border-right: 0.15em solid #c80d0d;
+    border-right: 0.15em solid #ddd;
   }
   &__next {
+    color: #ddd;
     border: none;
     background-color: transparent;
     position: relative;
@@ -64,6 +71,6 @@
     border-color: transparent;
   }
   50% {
-    border-color: #c80d0d;
+    border-color: #ddd;
   }
 }

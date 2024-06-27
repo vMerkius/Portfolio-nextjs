@@ -2,13 +2,14 @@ import Image from "next/image";
 
 type StackProps = {
   technology: string;
+  size: number;
 };
 
-const Stack: React.FC<StackProps> = ({ technology }) => {
+const Stack: React.FC<StackProps> = ({ technology, size }) => {
   return (
     <div
       className="about__stack__item"
-      style={{ position: "relative", width: "100%", height: "100px" }}
+      style={{ position: "relative", width: "10%", height: size }}
     >
       <Image
         src={`/stack/${technology}.png`}

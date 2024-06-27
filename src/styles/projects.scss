@@ -1,29 +1,62 @@
+@use "../colors/colors.scss" as *;
 .projects {
   padding: 0px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--background-2);
   &__header {
     font-size: 50px;
     font-weight: bold;
     margin: 0px 0px 40px 0px;
+    color: var(--text-white);
   }
   &__proj {
     display: flex;
     gap: 50px;
+    justify-content: center;
+    align-items: center;
     &__img {
-      border: 2px solid #c80d0d;
+      padding: 5px;
+      border: 2px solid var(--primary);
     }
     &__desc {
       max-width: 600px;
       display: flex;
+
       flex-direction: column;
+      justify-content: center;
+      &__links {
+        display: flex;
+        gap: 10px;
+        & a {
+          color: var(--text);
+          text-decoration: none;
+          padding: 10px;
+          border-radius: 10px;
+          background-color: var(--primary);
+          &:hover {
+            background-color: var(--primary-hover);
+          }
+        }
+      }
+
       gap: 10px;
+      &__text {
+        color: var(--text);
+      }
       &__header {
         margin: 0;
         font-size: 30px;
-
         font-weight: bold;
+        color: var(--text-white);
+      }
+      &__stack {
+        border-radius: 30px;
+        background-color: #1676f5;
+        padding: 10px;
+        display: flex;
+        gap: 3px;
       }
     }
   }

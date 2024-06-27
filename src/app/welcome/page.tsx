@@ -1,4 +1,5 @@
 // import ThreeScene from "@/components/three-scene";
+import "../../styles/main.scss";
 
 import Welcome from "@/components/welcome";
 import Header from "@/components/header";

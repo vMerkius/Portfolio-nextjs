@@ -1,23 +1,59 @@
+@use "../colors/colors.scss" as *;
+
 .about {
+  height: 100vh;
   &__desc {
     display: flex;
-    &__text {
+    justify-content: center;
+    height: 100%;
+    &__right {
       flex: 1;
-    }
-    &__img {
-      flex: 1;
-    }
-  }
-  &__stack {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    width: 740px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+      & h2 {
+        margin: 0;
+        text-align: center;
+        color: #fff;
+        font-size: 2rem;
+      }
+      & p {
+        margin: 0 auto;
+        max-width: 80%;
+        color: var(--text);
 
-    &__item {
-      height: 70px;
-      max-width: 70px;
+        font-size: 1.2rem;
+      }
+      &__stack {
+        min-width: 80%;
+        margin: 0 auto;
+        margin-top: 90px;
+        padding: 20px 10px;
+        border-radius: 20px;
+        background-color: var(--background-2);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        flex-wrap: wrap;
+      }
+    }
+    &__left {
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &__img {
+        border-radius: 50%;
+      }
+      & h3 {
+        color: #fff;
+        font-size: 1.5rem;
+      }
     }
   }
 }

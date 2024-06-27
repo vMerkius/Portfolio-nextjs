@@ -4,8 +4,8 @@
   left: 0;
   width: calc(100% - 40px);
   height: 50px;
-  background-color: #333;
-  color: #fff;
+  background-color: transparent;
+  color: #04e3ff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,6 +15,7 @@
     font-weight: bold;
     &:hover {
       cursor: pointer;
+      scale: 1.1;
     }
   }
   &__sections {
@@ -23,8 +24,10 @@
     &__option {
       padding: 10px;
       font-size: 16px;
+      translate: scale 0.3s ease-in-out;
       &:hover {
         cursor: pointer;
+        scale: 1.1;
       }
     }
   }
