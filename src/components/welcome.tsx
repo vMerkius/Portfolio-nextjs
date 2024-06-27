@@ -1,22 +1,24 @@
-import "../styles/welcome.scss";
-type WelcomeProps = {
-  setShowWelcome: React.Dispatch<React.SetStateAction<boolean>>;
-};
+"use client";
 
-const Welcome: React.FC<WelcomeProps> = ({ setShowWelcome }) => {
+import { useRouter } from "next/navigation";
+import "../styles/welcome.scss";
+
+const Welcome = () => {
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push("/");
+  };
   return (
-    <div className="welcome">
+    <section
+      className="welcome"
+      style={{ backgroundImage: `url(/bg/bg-1.jpg)` }}
+    >
       <h1 className="welcome__header">Welcome to my portfolio!</h1>
-      <button
-        className="welcome__next"
-        onClick={() => {
-          setShowWelcome(false);
-        }}
-      >
+      <button onClick={handleNavigation} className="welcome__next">
         Lets see! &rarr;
       </button>
-      {/* <ThreeScene /> */}
-    </div>
+    </section>
   );
 };
 

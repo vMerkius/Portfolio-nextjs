@@ -1,0 +1,30 @@
+.projects {
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__header {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0px 0px 40px 0px;
+  }
+  &__proj {
+    display: flex;
+    gap: 50px;
+    &__img {
+      border: 2px solid #c80d0d;
+    }
+    &__desc {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &__header {
+        margin: 0;
+        font-size: 30px;
+
+        font-weight: bold;
+      }
+    }
+  }
+}

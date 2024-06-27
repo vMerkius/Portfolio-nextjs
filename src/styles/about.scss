@@ -1,0 +1,23 @@
+.about {
+  &__desc {
+    display: flex;
+    &__text {
+      flex: 1;
+    }
+    &__img {
+      flex: 1;
+    }
+  }
+  &__stack {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 740px;
+
+    &__item {
+      height: 70px;
+      max-width: 70px;
+    }
+  }
+}
