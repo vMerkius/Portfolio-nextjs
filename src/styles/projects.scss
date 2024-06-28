@@ -1,10 +1,11 @@
 @use "../colors/colors.scss" as *;
 .projects {
-  padding: 0px 40px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--background-2);
+  padding-bottom: 40px;
   &__header {
     font-size: 50px;
     font-weight: bold;
@@ -12,18 +13,19 @@
     color: var(--text-white);
   }
   &__proj {
+    margin-bottom: 20px;
     display: flex;
     gap: 50px;
     justify-content: center;
     align-items: center;
+
     &__img {
-      padding: 5px;
-      border: 2px solid var(--primary);
+      padding: 10px;
+      border: 8px dashed var(--background);
     }
     &__desc {
       max-width: 600px;
       display: flex;
-
       flex-direction: column;
       justify-content: center;
       &__links {
@@ -52,11 +54,12 @@
         color: var(--text-white);
       }
       &__stack {
-        border-radius: 30px;
-        background-color: #1676f5;
+        border-radius: 20px;
+        background-color: var(--background);
+        box-shadow: 0px 0px 4px var(--background);
         padding: 10px;
         display: flex;
-        gap: 3px;
+        justify-content: space-around;
       }
     }
   }

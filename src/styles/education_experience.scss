@@ -1,0 +1,9 @@
+.edu_exp {
+  display: flex;
+  & h2 {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+  }
+}

@@ -6,8 +6,8 @@ import Projects from "@/components/projects";
 import Header from "@/components/header";
 import Home from "@/components/home";
 import About from "@/components/about";
-import Education from "@/components/education";
-import Experience from "@/components/experience";
+import EducationExperience from "@/components/education_experience";
+import Contact from "@/components/contact";
 const WelcomePage = () => {
   return (
     <main className="container">
@@ -17,8 +17,8 @@ const WelcomePage = () => {
 
       <About />
       <Projects />
-      <Education />
-      <Experience />
+      <EducationExperience />
+      <Contact />
     </main>
   );
 };

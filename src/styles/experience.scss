@@ -1,4 +1,7 @@
+@use "../colors/colors.scss" as *;
 .experience {
+  flex: 1;
+  background-color: var(--primary);
   h2 {
     font-size: 24px;
     font-weight: bold;

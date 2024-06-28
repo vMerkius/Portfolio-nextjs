@@ -1,0 +1,36 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  &__email {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    & span {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &__socials {
+    margin-top: 40px;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    &__github {
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+    }
+    &__linkedin {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

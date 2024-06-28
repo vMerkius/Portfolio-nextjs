@@ -7,17 +7,6 @@ const About = () => {
     <section className="about">
       <div className="about__desc">
         <div className="about__desc__left">
-          <div className="about__desc__left__img">
-            <Image
-              src="/images/profile.jpg"
-              alt="profile"
-              width={400}
-              height={400}
-            />
-          </div>
-          <h3>Mateusz Rojek</h3>
-        </div>
-        <div className="about__desc__right">
           <h2>About me</h2>
           <p>
             I am a first-semester computer science student actively programming
@@ -27,11 +16,22 @@ const About = () => {
             real projects with a team. I am interested in long-term cooperation.
           </p>
 
-          <div className="about__desc__right__stack">
+          <div className="about__desc__left__stack">
             {stack_data.map((item, index) => (
               <Stack key={index} technology={item} size={50} />
             ))}
           </div>
+        </div>
+        <div className="about__desc__right">
+          <div className="about__desc__right__img">
+            <Image
+              src="/images/profile.jpg"
+              alt="profile"
+              width={300}
+              height={300}
+            />
+          </div>
+          <h3>Mateusz Rojek</h3>
         </div>
       </div>
     </section>

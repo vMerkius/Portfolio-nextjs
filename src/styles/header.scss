@@ -1,3 +1,4 @@
+@use "../colors/colors.scss" as *;
 .nav-bar {
   position: fixed;
   top: 0;
@@ -5,13 +6,13 @@
   width: calc(100% - 40px);
   height: 50px;
   background-color: transparent;
-  color: #04e3ff;
+  color: var(--text-white);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   &__home {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     &:hover {
       cursor: pointer;
@@ -23,7 +24,7 @@
     gap: 20px;
     &__option {
       padding: 10px;
-      font-size: 16px;
+      font-size: 20px;
       translate: scale 0.3s ease-in-out;
       &:hover {
         cursor: pointer;

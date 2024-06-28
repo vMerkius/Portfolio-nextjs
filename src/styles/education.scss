@@ -1,4 +1,7 @@
+@use "../colors/colors.scss" as *;
 .education {
+  flex: 1;
+  background-color: var(--background-2);
   h2 {
     font-size: 24px;
     font-weight: bold;

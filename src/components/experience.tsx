@@ -3,7 +3,7 @@ import "../styles/experience.scss";
 const Experience = () => {
   return (
     <div className="experience">
-      <h2>EXPERIENCE</h2>
+      <h2>Experience</h2>
       <div className="experience__item">
         <p>
           <strong>&#8226; SUSE Polska z o.o.</strong>
@@ -20,8 +20,6 @@ const Experience = () => {
         <p>
           <strong>&#8226; Student Projects</strong>
         </p>
-        <p>Various Dates</p>
-        <p>Project Participant</p>
         <p>
           Engaged in several student projects, applying theoretical knowledge to
           practical tasks. Collaborated with peers to develop applications,

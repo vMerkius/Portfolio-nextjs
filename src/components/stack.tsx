@@ -8,7 +8,7 @@ type StackProps = {
 const Stack: React.FC<StackProps> = ({ technology, size }) => {
   return (
     <div
-      className="about__stack__item"
+      className="about__desc__left__stack__item"
       style={{ position: "relative", width: "10%", height: size }}
     >
       <Image
