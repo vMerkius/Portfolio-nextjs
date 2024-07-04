@@ -2,6 +2,7 @@ import "../styles/projects.scss";
 import Image from "next/image";
 import logoSpiki from "../../public/images/spiki-app.png";
 import Stack from "./stack";
+import Slider from "./slider";
 
 const stack_first_data = [
   "react",
@@ -25,15 +26,21 @@ const stack_second_data = [
 ];
 const Projects = () => {
   return (
-    <section className="projects">
+    <section id="projects" className="projects">
       <h2 className="projects__header">Projects</h2>
       <div className="projects__proj">
-        <Image
+        <div className="projects__proj__img">
+          <Slider
+            image1="/images/spiki-app.png"
+            image2="/images/spiki-app.png"
+          />
+        </div>
+        {/* <Image
           className="projects__proj__img"
           src={logoSpiki}
           alt="project image"
           width={600}
-        />
+        /> */}
         <div className="projects__proj__desc">
           <h3 className="projects__proj__desc__header">
             BoostersDEN - Application for boosting and coaching in games

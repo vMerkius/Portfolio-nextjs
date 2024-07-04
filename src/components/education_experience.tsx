@@ -4,7 +4,7 @@ import Experience from "./experience";
 
 const EducationExperience = () => {
   return (
-    <div className="edu_exp">
+    <div id="edu_exp" className="edu_exp">
       <Education />
       <Experience />
     </div>

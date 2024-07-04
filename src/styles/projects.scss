@@ -1,11 +1,23 @@
 @use "../colors/colors.scss" as *;
 .projects {
-  padding-top: 40px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--background-2);
   padding-bottom: 40px;
+  position: relative;
+  &::after {
+    content: "";
+    bottom: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background-color: var(--text);
+  }
+
   &__header {
     font-size: 50px;
     font-weight: bold;
@@ -20,6 +32,8 @@
     align-items: center;
 
     &__img {
+      height: 350px;
+      width: 600px;
       padding: 10px;
       border: 8px dashed var(--background);
     }

@@ -4,7 +4,7 @@ import "../styles/about.scss";
 import Image from "next/image";
 const About = () => {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="about__desc">
         <div className="about__desc__left">
           <h2>About me</h2>

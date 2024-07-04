@@ -6,7 +6,7 @@ import Header from "@/components/header";
 const WelcomePage = () => {
   return (
     <main className="container">
-      <Header />
+      {/* <Header /> */}
       <Welcome />
     </main>
   );

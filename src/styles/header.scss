@@ -1,4 +1,7 @@
 @use "../colors/colors.scss" as *;
+html {
+  scroll-behavior: smooth;
+}
 .nav-bar {
   position: fixed;
   top: 0;
@@ -11,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  z-index: 10;
   &__home {
     font-size: 24px;
     font-weight: bold;
@@ -26,9 +30,12 @@
       padding: 10px;
       font-size: 20px;
       translate: scale 0.3s ease-in-out;
+      color: var(--text-white);
+      text-decoration: none;
+      transition: scale 0.3s ease-in-out;
       &:hover {
         cursor: pointer;
-        scale: 1.1;
+        scale: 1.15;
       }
     }
   }

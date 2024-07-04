@@ -8,10 +8,18 @@ import Home from "@/components/home";
 import About from "@/components/about";
 import EducationExperience from "@/components/education_experience";
 import Contact from "@/components/contact";
+import { useState } from "react";
+import FallingAssets from "@/components/falling_assets";
 const WelcomePage = () => {
+  const [isFallingEnabled, setIsFallingEnabled] = useState(true);
+
+  const toggleFallingAssets = () => {
+    setIsFallingEnabled((prev) => !prev);
+  };
   return (
     <main className="container">
-      <Header />
+      <Header toggleFallingAssets={toggleFallingAssets} />
+      {isFallingEnabled && <FallingAssets isEnabled={isFallingEnabled} />}
 
       {/* <Home /> */}
 

@@ -10,7 +10,7 @@ const Contact = () => {
     navigator.clipboard.writeText(text);
   };
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <h2>Contact</h2>
       <div className="contact__email">
         <Image src={mail} alt="project image" width={25} />
