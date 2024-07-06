@@ -1,5 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import "../styles/slider.scss";
+import arrows from "../../public/images/left-right.svg";
+import Image from "next/image";
 
 interface SliderProps {
   image1: string;
@@ -63,7 +65,18 @@ const Slider = ({ image1, image2 }: SliderProps) => {
         onTouchStart={handleMouseDown}
         onTouchEnd={handleMouseUp}
         style={{ left: `calc(${dividerPosition}% - 5px)`, height: "100%" }}
-      />
+      >
+        <div className="slider__divider__middle">
+          <Image
+            src={arrows}
+            alt="Arrows"
+            layout="intrinsic"
+            width={30}
+            height={30}
+            className="slider__divider__middle__img"
+          />
+        </div>
+      </div>
       <div
         className="slider__container slider__container--right"
         style={{ width: `${100 - dividerPosition}%`, height: "100%" }}

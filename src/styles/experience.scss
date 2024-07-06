@@ -1,7 +1,21 @@
 @use "../colors/colors.scss" as *;
 .experience {
   flex: 1;
-  background-color: var(--primary);
+  // background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  &::after {
+    content: "";
+    width: 1px;
+    height: 80%;
+    background-color: var(--text-white);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(10%);
+  }
   h2 {
     font-size: 24px;
     font-weight: bold;
@@ -10,6 +24,7 @@
 
   &__item {
     margin-bottom: 20px;
+    width: 70%;
 
     p {
       margin: 5px 0;

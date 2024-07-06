@@ -16,6 +16,19 @@
     cursor: col-resize;
     z-index: 10;
     transform: translateX(-50%);
+    &__middle {
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(69, 80, 115, 0.8);
+      border-radius: 50%;
+      width: 25px;
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
   }
 
   &__container {

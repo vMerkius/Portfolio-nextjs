@@ -31,8 +31,8 @@ const Projects = () => {
       <div className="projects__proj">
         <div className="projects__proj__img">
           <Slider
-            image1="/images/spiki-app.png"
-            image2="/images/spiki-app.png"
+            image1="/images/boosting1.png"
+            image2="/images/boosting2.png"
           />
         </div>
         {/* <Image
@@ -94,20 +94,14 @@ const Projects = () => {
             ))}
           </div>
         </div>
-        <Image
-          className="projects__proj__img"
-          src={logoSpiki}
-          alt="project image"
-          width={600}
-        />
+        <div className="projects__proj__img">
+          <Slider image1="/images/spiki1.png" image2="/images/spiki2.png" />
+        </div>
       </div>
       <div className="projects__proj">
-        <Image
-          className="projects__proj__img"
-          src={logoSpiki}
-          alt="project image"
-          width={600}
-        />
+        <div className="projects__proj__img">
+          <Slider image1="/images/sort1.png" image2="/images/sort2.png" />
+        </div>
         <div className="projects__proj__desc">
           <h3 className="projects__proj__desc__header">
             Sorting Algorithm Visualizer

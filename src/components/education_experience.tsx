@@ -5,8 +5,11 @@ import Experience from "./experience";
 const EducationExperience = () => {
   return (
     <div id="edu_exp" className="edu_exp">
-      <Education />
-      <Experience />
+      <h2>Education & Experience</h2>
+      <div className="edu_exp__container">
+        <Education />
+        <Experience />
+      </div>
     </div>
   );
 };

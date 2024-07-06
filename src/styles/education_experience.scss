@@ -1,11 +1,28 @@
 .edu_exp {
   display: flex;
   position: relative;
+  background-color: var(--background);
+  padding: 60px 0px;
+  color: var(--text-white);
+  flex-direction: column;
+
+  &__container {
+    display: flex;
+    border-radius: 100px;
+    position: relative;
+  }
 
   & h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--text-white);
+    text-align: center;
+  }
+  & h3 {
     margin: 0;
     text-align: center;
     color: #fff;
-    font-size: 2rem;
+    font-size: 30px;
+    margin-bottom: 15px;
   }
 }

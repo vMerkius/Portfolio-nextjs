@@ -31,10 +31,13 @@ const Header: React.FC<HeaderProps> = ({ toggleFallingAssets }) => {
         <a href="#contact" className="nav-bar__sections__option">
           Contact
         </a>
+        <button
+          onClick={handleToggle}
+          className="nav-bar__sections__option nav-bar__sections__button"
+        >
+          {isFallingEnabled ? "Disable Animation" : "Enable Animation"}
+        </button>
       </div>
-      <button onClick={handleToggle} className="nav-bar__sections__option">
-        {isFallingEnabled ? "Disable Falling" : "Enable Falling"}
-      </button>
     </header>
   );
 };

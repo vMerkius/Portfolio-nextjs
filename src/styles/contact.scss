@@ -1,9 +1,11 @@
+@use "../colors/colors.scss" as *;
 .contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 300px;
+  background-color: var(--background-2);
   &__email {
     display: flex;
     gap: 5px;

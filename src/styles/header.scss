@@ -18,24 +18,47 @@ html {
   &__home {
     font-size: 24px;
     font-weight: bold;
+    transition: scale 0.3s ease-in-out, transform 0.3s ease-in-out;
+
     &:hover {
       cursor: pointer;
+      transform: translateY(5px);
+
       scale: 1.1;
     }
   }
   &__sections {
     display: flex;
     gap: 20px;
+    position: relative;
+
     &__option {
       padding: 10px;
       font-size: 20px;
       translate: scale 0.3s ease-in-out;
       color: var(--text-white);
       text-decoration: none;
-      transition: scale 0.3s ease-in-out;
+      transition: scale 0.3s ease-in-out, transform 0.3s ease-in-out;
       &:hover {
         cursor: pointer;
+        transform: translateY(5px);
+
         scale: 1.15;
+      }
+    }
+    &__button {
+      border: none;
+      padding: 3px 20px;
+      border-radius: 15px;
+      transition: scale 0.3s ease-in-out, transform 0.3s ease-in-out;
+      background-color: var(--text-white);
+      color: var(--background-2);
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(5px);
+
+        scale: 1.05;
       }
     }
   }

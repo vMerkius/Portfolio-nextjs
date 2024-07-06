@@ -7,16 +7,16 @@
   background-color: var(--background-2);
   padding-bottom: 40px;
   position: relative;
-  &::after {
-    content: "";
-    bottom: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 1px;
-    background-color: var(--text);
-  }
+  // &::after {
+  //   content: "";
+  //   bottom: 20px;
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   width: 80%;
+  //   height: 1px;
+  //   background-color: var(--text);
+  // }
 
   &__header {
     font-size: 50px;
