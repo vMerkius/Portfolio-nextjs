@@ -13,8 +13,9 @@
   top: -50px;
   width: 30px;
   height: 30px;
-  background: url("/assets/partyhat.png") no-repeat center center;
   background-size: contain;
+  background-repeat: no-repeat;
+
   animation: fall 5s linear infinite;
   opacity: 0.8;
 }

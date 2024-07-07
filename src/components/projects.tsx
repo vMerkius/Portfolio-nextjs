@@ -3,6 +3,7 @@ import Image from "next/image";
 import logoSpiki from "../../public/images/spiki-app.png";
 import Stack from "./stack";
 import Slider from "./slider";
+import { useEffect } from "react";
 
 const stack_first_data = [
   "react",
@@ -25,6 +26,29 @@ const stack_second_data = [
   "git",
 ];
 const Projects = () => {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animated");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const elementsToAnimate = document.querySelectorAll(
+      ".projects__proj__img, .projects__proj__desc"
+    );
+    elementsToAnimate.forEach((el) => observer.observe(el));
+
+    return () => {
+      elementsToAnimate.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
   return (
     <section id="projects" className="projects">
       <h2 className="projects__header">Projects</h2>
@@ -35,12 +59,6 @@ const Projects = () => {
             image2="/images/boosting2.png"
           />
         </div>
-        {/* <Image
-          className="projects__proj__img"
-          src={logoSpiki}
-          alt="project image"
-          width={600}
-        /> */}
         <div className="projects__proj__desc">
           <h3 className="projects__proj__desc__header">
             BoostersDEN - Application for boosting and coaching in games
@@ -58,8 +76,12 @@ const Projects = () => {
             and rate their sessions, ensuring high-quality service.
           </p>
           <div className="projects__proj__desc__links">
-            <a href="#">Github</a>
-            <a href="#">Demo</a>
+            <a href="https://front-b.onrender.com" target="blank">
+              Demo - Front
+            </a>
+            <a href="https://back-b-kzfc.onrender.com" target="blank">
+              Demo - Back
+            </a>
           </div>
           <div className="projects__proj__desc__stack">
             {stack_second_data.map((item, index) => (
@@ -85,8 +107,15 @@ const Projects = () => {
             supports learning through flashcards and tracking personal progress.
           </p>
           <div className="projects__proj__desc__links">
-            <a href="#">Github</a>
-            <a href="#">Demo</a>
+            <a href="https://github.com/vMerkius/lan-front" target="blank">
+              Github - Admin Panel
+            </a>
+            <a href="https://github.com/vMerkius/spiki" target="blank">
+              Github - Front
+            </a>
+            <a href="https://github.com/vMerkius/lan-back" target="blank">
+              Github - Back
+            </a>
           </div>
           <div className="projects__proj__desc__stack">
             {stack_first_data.map((item, index) => (
@@ -116,8 +145,18 @@ const Projects = () => {
             directly observing the process.
           </p>
           <div className="projects__proj__desc__links">
-            <a href="#">Github</a>
-            <a href="#">Demo</a>
+            <a
+              href="https://github.com/vMerkius/sort-visualization-"
+              target="blank"
+            >
+              Github
+            </a>
+            <a
+              href="https://friendly-lamington-67daa6.netlify.app"
+              target="blank"
+            >
+              Demo
+            </a>
           </div>
           <div className="projects__proj__desc__stack">
             {stack_first_data.map((item, index) => (

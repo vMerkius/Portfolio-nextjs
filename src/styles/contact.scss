@@ -4,35 +4,46 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 400px;
   background-color: var(--background-2);
-  &__email {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-    & span {
-      &:hover {
-        cursor: pointer;
-      }
+  &__container {
+    background-color: white;
+    padding: 15px 60px;
+    border-radius: 30px;
+    & h2 {
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
     }
-  }
-  &__socials {
-    margin-top: 40px;
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-    align-items: center;
-    &__github {
+
+    &__email {
       display: flex;
       gap: 5px;
       justify-content: center;
       align-items: center;
+      & span {
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
-    &__linkedin {
+    &__socials {
+      margin-top: 40px;
       display: flex;
+      gap: 100px;
       justify-content: center;
       align-items: center;
+      &__github {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+      }
+      &__linkedin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }

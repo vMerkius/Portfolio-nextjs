@@ -10,6 +10,9 @@
     display: flex;
     border-radius: 100px;
     position: relative;
+    @media (max-width: 1025px) {
+      flex-direction: column;
+    }
   }
 
   & h2 {

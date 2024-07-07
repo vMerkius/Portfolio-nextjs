@@ -7,19 +7,8 @@
   background-color: var(--background-2);
   padding-bottom: 40px;
   position: relative;
-  // &::after {
-  //   content: "";
-  //   bottom: 20px;
-  //   position: absolute;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   width: 80%;
-  //   height: 1px;
-  //   background-color: var(--text);
-  // }
-
   &__header {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     margin: 0px 0px 40px 0px;
     color: var(--text-white);
@@ -30,29 +19,50 @@
     gap: 50px;
     justify-content: center;
     align-items: center;
+    @media (max-width: 1025px) {
+      flex-direction: column;
+    }
 
     &__img {
       height: 350px;
       width: 600px;
       padding: 10px;
       border: 8px dashed var(--background);
+      opacity: 0;
+      &.animated:nth-of-type(odd) {
+        animation: slideInLeft 1s ease-in-out forwards;
+      }
+      &.animated:nth-of-type(even) {
+        animation: slideInRight 1s ease-in-out forwards;
+      }
     }
     &__desc {
       max-width: 600px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      opacity: 0;
+      &.animated:nth-of-type(odd) {
+        animation: slideInRight 1s ease-in-out forwards;
+      }
+      &.animated:nth-of-type(even) {
+        animation: slideInLeft 1s ease-in-out forwards;
+      }
       &__links {
         display: flex;
         gap: 10px;
+        margin-bottom: 10px;
+
         & a {
-          color: var(--text);
+          color: var(--text-white);
           text-decoration: none;
           padding: 10px;
           border-radius: 10px;
           background-color: var(--primary);
+          transition: all 0.3s ease-in-out;
           &:hover {
-            background-color: var(--primary-hover);
+            transform: translateY(-4px);
+            background-color: var(--background);
           }
         }
       }
@@ -76,5 +86,27 @@
         justify-content: space-around;
       }
     }
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

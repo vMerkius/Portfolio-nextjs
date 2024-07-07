@@ -13,7 +13,14 @@ const Header: React.FC<HeaderProps> = ({ toggleFallingAssets }) => {
 
   return (
     <header className="nav-bar">
-      <span className="nav-bar__home">Home</span>
+      <span
+        onClick={() => {
+          location.href = "";
+        }}
+        className="nav-bar__home"
+      >
+        Home
+      </span>
       <div className="nav-bar__sections">
         <a href="#about" className="nav-bar__sections__option">
           About
