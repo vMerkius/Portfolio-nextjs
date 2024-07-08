@@ -1,0 +1,10 @@
+@use "../colors/colors.scss" as *;
+
+.footer {
+  padding: 15px 0px 15px 10px;
+  background-color: var(--background);
+  color: var(--text-white);
+  & p {
+    margin: 0;
+  }
+}

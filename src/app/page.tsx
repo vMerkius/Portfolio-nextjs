@@ -10,6 +10,7 @@ import EducationExperience from "@/components/education_experience";
 import Contact from "@/components/contact";
 import { useState } from "react";
 import FallingAssets from "@/components/falling_assets";
+import Footer from "@/components/footer";
 const WelcomePage = () => {
   const [isFallingEnabled, setIsFallingEnabled] = useState(true);
 
@@ -20,13 +21,11 @@ const WelcomePage = () => {
     <main className="container">
       <Header toggleFallingAssets={toggleFallingAssets} />
       {isFallingEnabled && <FallingAssets isEnabled={isFallingEnabled} />}
-
-      {/* <Home /> */}
-
       <About />
       <Projects />
       <EducationExperience />
       <Contact />
+      <Footer />
     </main>
   );
 };
