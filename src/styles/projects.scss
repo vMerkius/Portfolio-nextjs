@@ -12,6 +12,10 @@
     font-weight: bold;
     margin: 0px 0px 40px 0px;
     color: var(--text-white);
+    opacity: 0;
+    &.animated {
+      animation: fadeIn 2s ease-in-out forwards;
+    }
   }
   &__proj {
     margin-bottom: 20px;
@@ -30,10 +34,10 @@
       border: 8px dashed var(--background);
       opacity: 0;
       &.animated:nth-of-type(odd) {
-        animation: slideInLeft 1s ease-in-out forwards;
+        animation: slideInLeft 1.2s ease-in-out forwards;
       }
       &.animated:nth-of-type(even) {
-        animation: slideInRight 1s ease-in-out forwards;
+        animation: slideInRight 1.2s ease-in-out forwards;
       }
     }
     &__desc {
@@ -43,10 +47,10 @@
       justify-content: center;
       opacity: 0;
       &.animated:nth-of-type(odd) {
-        animation: slideInRight 1s ease-in-out forwards;
+        animation: slideInRight 1.2s ease-in-out forwards;
       }
       &.animated:nth-of-type(even) {
-        animation: slideInLeft 1s ease-in-out forwards;
+        animation: slideInLeft 1.2s ease-in-out forwards;
       }
       &__links {
         display: flex;
@@ -107,6 +111,15 @@
   }
   to {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }

@@ -1,6 +1,4 @@
 import "../styles/projects.scss";
-import Image from "next/image";
-import logoSpiki from "../../public/images/spiki-app.png";
 import Stack from "./stack";
 import Slider from "./slider";
 import { useEffect } from "react";
@@ -41,8 +39,9 @@ const Projects = () => {
     }, observerOptions);
 
     const elementsToAnimate = document.querySelectorAll(
-      ".projects__proj__img, .projects__proj__desc"
+      ".projects__header, .projects__proj__img, .projects__proj__desc"
     );
+
     elementsToAnimate.forEach((el) => observer.observe(el));
 
     return () => {
@@ -76,7 +75,7 @@ const Projects = () => {
             and rate their sessions, ensuring high-quality service.
           </p>
           <div className="projects__proj__desc__links">
-            <a href="https://front-b.onrender.com" target="blank">
+            <a href="https://www.boosters-den.com/" target="blank">
               Demo - Front
             </a>
             <a href="https://back-b-kzfc.onrender.com" target="blank">

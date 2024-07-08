@@ -3,7 +3,6 @@
 .about {
   height: 100vh;
   width: 100%;
-  height: 100%;
   background-image: url("/bg/background2.png");
   background-size: cover;
   background-position: center;
@@ -13,25 +12,36 @@
     display: flex;
     justify-content: center;
     height: 100%;
+    @media (max-width: 1025px) {
+      flex-direction: column;
+    }
+
     &__left {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 15px;
+      animation: slideInLeft 1.2s ease-in-out forwards,
+        moveDown 1s ease-in-out 1.2s forwards;
+      @media (max-width: 1025px) {
+        animation: slideInLeft 1.2s ease-in-out forward;
+      }
+
       & h2 {
         margin: 0;
         text-align: center;
         color: #fff;
         font-size: 2rem;
       }
+
       & p {
         margin: 0 auto;
         max-width: 80%;
         color: var(--text);
-
         font-size: 1.2rem;
       }
+
       &__stack {
         box-shadow: 0px 0px 14px var(--background-2);
         min-width: 80%;
@@ -48,6 +58,12 @@
 
         &__item {
           transition: scale 0.4s ease-in-out;
+          width: 10%;
+
+          @media (max-width: 1025px) {
+            width: 15%;
+          }
+
           &:hover {
             cursor: pointer;
             scale: 1.15;
@@ -55,20 +71,87 @@
         }
       }
     }
+
     &__right {
+      margin-left: 40px;
       height: 100%;
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      &__img {
-        border-radius: 50%;
+      transform: translateY(-20%);
+      animation: slideInRight 1.2s ease-in-out forwards,
+        moveUp 1s ease-in-out 1.2s forwards;
+      @media (max-width: 1025px) {
+        animation: slideInRight 1.2s ease-in-out forwards;
       }
-      & h3 {
-        color: #fff;
-        font-size: 1.5rem;
+
+      @media (max-width: 1025px) {
+        transform: translateY(0);
+        margin-left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__img {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        border: 10px solid var(--primary-2);
+        padding: 10px;
+
+        & h3 {
+          width: 400px;
+          color: #fff;
+          font-size: 1.5rem;
+          position: absolute;
+          bottom: -70px;
+          left: 60px;
+        }
       }
     }
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(2vh);
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8vh);
   }
 }

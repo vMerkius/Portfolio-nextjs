@@ -18,6 +18,7 @@ const FallingAssets: React.FC<FallingAssetsProps> = ({ isEnabled }) => {
     "/assets/emoji.png",
     "/assets/present.png",
   ];
+  const maxAssets = 20;
 
   useEffect(() => {
     if (!isEnabled) {
@@ -27,15 +28,19 @@ const FallingAssets: React.FC<FallingAssetsProps> = ({ isEnabled }) => {
 
     const intervalId = setInterval(() => {
       const randomImage = images[Math.floor(Math.random() * images.length)];
-      setAssets((prevAssets) => [
-        ...prevAssets,
-        {
+      setAssets((prevAssets) => {
+        const newAsset = {
           id: Math.random(),
           left: Math.random() * 100,
           image: randomImage,
-        },
-      ]);
-    }, 300);
+        };
+        const updatedAssets = [...prevAssets, newAsset];
+        if (updatedAssets.length > maxAssets) {
+          updatedAssets.shift();
+        }
+        return updatedAssets;
+      });
+    }, 700);
 
     return () => clearInterval(intervalId);
   }, [isEnabled]);

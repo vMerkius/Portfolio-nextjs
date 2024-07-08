@@ -28,10 +28,10 @@ const About = () => {
               src="/images/profile.jpg"
               alt="profile"
               width={300}
-              height={300}
+              height={380}
             />
+            <h3>Mateusz Rojek</h3>
           </div>
-          <h3>Mateusz Rojek</h3>
         </div>
       </div>
     </section>

@@ -1,11 +1,11 @@
 @use "../colors/colors.scss" as *;
 .experience {
   flex: 1;
-  // background-color: var(--primary);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+
   &::after {
     content: "";
     width: 1px;
@@ -13,7 +13,7 @@
     background-color: var(--text-white);
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 0;
     transform: translateX(-50%) translateY(10%);
     @media (max-width: 1025px) {
       display: none;
